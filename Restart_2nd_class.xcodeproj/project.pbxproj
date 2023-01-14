@@ -14,6 +14,8 @@
 		DF5B65A529732A5E000E667A /* Restart_2nd_classTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5B65A429732A5E000E667A /* Restart_2nd_classTests.swift */; };
 		DF5B65AF29732A5E000E667A /* Restart_2nd_classUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5B65AE29732A5E000E667A /* Restart_2nd_classUITests.swift */; };
 		DF5B65B129732A5E000E667A /* Restart_2nd_classUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5B65B029732A5E000E667A /* Restart_2nd_classUITestsLaunchTests.swift */; };
+		DF5B65BF29733CED000E667A /* chimeup.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DF5B65BD29733CED000E667A /* chimeup.mp3 */; };
+		DF5B65C029733CED000E667A /* success.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DF5B65BE29733CED000E667A /* success.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		DF5B65AA29732A5E000E667A /* Restart_2nd_classUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Restart_2nd_classUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF5B65AE29732A5E000E667A /* Restart_2nd_classUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restart_2nd_classUITests.swift; sourceTree = "<group>"; };
 		DF5B65B029732A5E000E667A /* Restart_2nd_classUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restart_2nd_classUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DF5B65BD29733CED000E667A /* chimeup.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chimeup.mp3; sourceTree = "<group>"; };
+		DF5B65BE29733CED000E667A /* success.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = success.m4a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 		DF5B659229732A58000E667A /* Restart_2nd_class */ = {
 			isa = PBXGroup;
 			children = (
+				DF5B65C129733CF3000E667A /* Sounds */,
 				DF5B659329732A58000E667A /* Restart_2nd_classApp.swift */,
 				DF5B659529732A58000E667A /* ContentView.swift */,
 				DF5B659729732A5D000E667A /* Assets.xcassets */,
@@ -125,6 +130,15 @@
 				DF5B65B029732A5E000E667A /* Restart_2nd_classUITestsLaunchTests.swift */,
 			);
 			path = Restart_2nd_classUITests;
+			sourceTree = "<group>";
+		};
+		DF5B65C129733CF3000E667A /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				DF5B65BD29733CED000E667A /* chimeup.mp3 */,
+				DF5B65BE29733CED000E667A /* success.m4a */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +245,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF5B65C029733CED000E667A /* success.m4a in Resources */,
+				DF5B65BF29733CED000E667A /* chimeup.mp3 in Resources */,
 				DF5B659B29732A5D000E667A /* Preview Assets.xcassets in Resources */,
 				DF5B659829732A5D000E667A /* Assets.xcassets in Resources */,
 			);
