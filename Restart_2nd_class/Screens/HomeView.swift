@@ -17,12 +17,7 @@ struct HomeView: View {
             //MARK: HEADER
             Spacer()
             ZStack{
-                Circle()
-                    .stroke(.gray.opacity(0.1), lineWidth: 40)
-                    .frame(width: 260, height: 260, alignment: .center)
-                Circle()
-                    .stroke(.gray.opacity(0.1), lineWidth: 80)
-                    .frame(width: 260, height: 260)
+                CircleGroupView(ShapeColor: .secondary, ShapeOpacity: 0.2)
                 Image("character-2")
                     .resizable()
                     .scaledToFit()
@@ -43,24 +38,18 @@ struct HomeView: View {
             }//: VSTACK
             Spacer()
             //MARK: FOOTER
-            ZStack{
-                Capsule()
-                    .fill(Color("purpleColor"))
-                    .frame( width: 150,height: 55)
-                HStack{
-                    Image(systemName: "chevron.left.circle")
-                        .foregroundColor(.white)
-                        .font(.system(size: 22))
-                        .fontWeight(.bold)
-                    Text("Restart")
-                        .foregroundColor(.white)
-                        .font(.system(size: 22, design: .rounded))
-                        .fontWeight(.bold)
-                }//: HSTACK
-            } //: ZSTACK
-            .onTapGesture {
+            Button(action:{
                 isOnboardingViewActive = true
+            }){
+                Image(systemName: "arrow.triangle.2.circlepath.circle.fill")
+                    .imageScale(.large)
+                Text("Restart")
+                    .font(.system(.title3, design: .rounded))
+                    .fontWeight(.bold)
             }
+            .buttonStyle(.borderedProminent)
+            .buttonBorderShape(.capsule)
+            .controlSize(.large)
         }//: VSTACK
     }
 }
