@@ -26,10 +26,19 @@ struct OnboardingView: View {
                 Spacer()
                 
                 VStack(spacing:0){
-                    Text("Share")
-                        .font(.system(size: 60))
-                        .fontWeight(.heavy)
-                        .foregroundColor(.white)
+                    if abs(imageOffset.width)>0 {
+                        Text("Give")
+                            .font(.system(size: 60))
+                            .fontWeight(.heavy)
+                            .foregroundColor(.white)
+                    }else
+                    {
+                        Text("Share")
+                            .font(.system(size: 60))
+                            .fontWeight(.heavy)
+                            .foregroundColor(.white)
+                            
+                    }
                     
                     Text("""
                         It is not how much we give but
@@ -41,6 +50,7 @@ struct OnboardingView: View {
                     .fontWeight(.light)
                     .padding(.horizontal, 10)
                     
+                    
                 }//: HEADER
                 .opacity(isAnimating ? 1 : 0)
                 .offset(y: isAnimating ? 0 : -40)
@@ -48,6 +58,9 @@ struct OnboardingView: View {
                 //MARK: - CENTER
                 ZStack {
                     CircleGroupView(ShapeColor: .white, ShapeOpacity: 0.2)
+                        .offset(x: imageOffset.width * -1)
+                        .blur(radius: abs(imageOffset.width)/5)
+                        .animation(.easeOut(duration: 1), value: imageOffset)
                     Image("character-1")
                         .resizable()
                         .scaledToFit()
@@ -68,6 +81,17 @@ struct OnboardingView: View {
                         )//: GESTURE
                         .animation(.easeOut(duration: 1), value: imageOffset)
                 }//: CENTER
+                .overlay (
+                    Image(systemName: "arrow.left.and.right.circle")
+                        .font(.system(size: 44, weight: .ultraLight))
+                        .foregroundColor(.white)
+                        .offset(y:20)
+                        .blur(radius: abs(imageOffset.width)/50)
+                        .animation(.easeOut(duration: 0.3), value: imageOffset)
+                    ,alignment: .bottom
+                        
+                )
+               
                 
                 Spacer()
                 
